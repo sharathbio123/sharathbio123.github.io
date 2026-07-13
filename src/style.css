@@ -478,15 +478,9 @@ p {
   background: rgba(255, 255, 255, 0.06);
 }
 
-.social-tile__icon svg,
-.social-tile__icon img {
+.social-tile__icon svg {
   width: 1.45rem;
   height: 1.45rem;
-  display: block;
-}
-
-.social-tile__icon img {
-  object-fit: contain;
 }
 
 .social-tile__label {
@@ -525,6 +519,7 @@ p {
 }
 
 .social-tile--scholar .social-tile__icon {
+  color: var(--scholar);
   background: rgba(66, 133, 244, 0.14);
 }
 
