@@ -323,6 +323,14 @@
         anchor.addEventListener('click', (event) => {
           const targetId = anchor.getAttribute('href');
           if (!targetId || targetId === '#') return;
+
+          if (targetId === '#top') {
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            history.pushState(null, '', '#top');
+            return;
+          }
+
           const target = document.querySelector(targetId);
           if (!target) return;
           event.preventDefault();
