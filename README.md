@@ -1,12 +1,10 @@
-# sharathbio123.github.io
+# Portfolio source
 
-Portfolio of **Sharath B S** — [sharathbio123.github.io](https://sharathbio123.github.io)
+Private source for **Sharath B S** — live site: [sharathbio123.github.io](https://sharathbio123.github.io)
 
-## Updating images & links
+> **Option B (private source):** See **[docs/OPTION-B-MIGRATION.md](docs/OPTION-B-MIGRATION.md)** for the full setup. Built files deploy to the public repo `sharathbio123/sharathbio123.github.io` (`gh-pages` branch).
 
-All media files go in **`public/`** (served at the site root after deploy). Push changes to **`main`** — GitHub Actions rebuilds the site automatically.
-
-> **Note:** Gallery and blog sections are not shown on the live site yet. Use the steps below when you are ready to add them back in `index.html`.
+## Quick reference (after migration)
 
 ### Profile photo
 
@@ -16,44 +14,11 @@ All media files go in **`public/`** (served at the site root after deploy). Push
 
 ### CV (PDF)
 
-Upload your résumé as **`public/CV.pdf`**. The **CV** link in the nav opens it in a new browser tab (`/CV.pdf` on the live site).
+Upload your résumé as **`public/CV.pdf`**. The **CV** nav link opens `/CV.pdf` in a new tab.
 
-If your file has a different name, either rename it to `CV.pdf` or change the `href` on the CV nav link in `index.html`.
+### Gallery / blog (future)
 
-### Advanced TechBio — workflow screenshots
-
-Upload screenshots to **`public/gallery/techbio/`** using these exact names (`.jpg` or `.png`):
-
-| Filename | Shown as |
-|----------|----------|
-| `workflow-1.jpg` | Multi-omics analysis pipeline |
-| `workflow-2.jpg` | Agentic AI / RAG workflow |
-| `workflow-3.jpg` | Local LLM via Ollama — data exploration |
-
-To change captions or add more images, edit the **Workflow snapshots** gallery in `index.html` (search for `gallery/techbio`).
-
-Placeholder `.svg` files display until you upload the matching `.jpg`.
-
-### Advanced TechBio — blog links
-
-Edit the `<ul class="blog-list">` block under **Advanced TechBio** in `index.html`:
-
-- Replace `href="#"` with your blog URL (Medium, Substack, LinkedIn article, etc.)
-- Update the link text to your post title
-- Add or remove `<li>` items as needed
-
-### Beyond the Terminal — personal photos
-
-Upload photos to **`public/gallery/personal/`**:
-
-| Filename | Shown as |
-|----------|----------|
-| `badminton.jpg` | Badminton |
-| `cricket.jpg` | Cricket |
-| `hiking.jpg` | Hiking |
-| `social.jpg` | Socializing |
-
-Edit captions or add slots in `index.html` (search for `gallery/personal`).
+Gallery and blog blocks are not on the live site yet. When you add them back in `index.html`, put images under `public/gallery/` — see git history or earlier commits for filenames.
 
 ### Local preview
 
