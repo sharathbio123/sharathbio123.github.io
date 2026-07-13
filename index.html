@@ -39,51 +39,73 @@
 
     <main id="main">
       <section class="hero">
-        <div class="container hero-content">
-          <p class="eyebrow">Bioinformatician · TechBio Enthusiast</p>
-          <h1>Sharath B S, <span class="hero-degree">M.Sc., Ph.D.</span></h1>
-          <p class="hero-role">Research Scientist at UR Advanced Therapeutics</p>
-          <p class="hero-email">
-            <a href="mailto:sharathbio123@gmail.com">sharathbio123@gmail.com</a>
-          </p>
+        <div class="container hero-grid">
+          <div class="hero-photo-col">
+            <div class="hero-photo-frame">
+              <img
+                class="hero-photo"
+                src="/profile.jpg"
+                alt="Portrait of Sharath B S"
+                width="320"
+                height="320"
+                onerror="this.onerror=null;this.src='/profile.svg';"
+              />
+            </div>
+          </div>
+          <div class="hero-copy">
+            <p class="eyebrow">Bioinformatician · TechBio Enthusiast</p>
+            <h1>Sharath B S, <span class="hero-degree">M.Sc., Ph.D.</span></h1>
+            <p class="hero-role">Research Scientist at UR Advanced Therapeutics</p>
+            <a class="btn btn-primary" href="mailto:sharathbio123@gmail.com">
+              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 2v.01L12 13 4 6.01V6h16ZM4 18V8.25l7.4 6.17a1 1 0 0 0 1.2 0L20 8.25V18H4Z"
+                />
+              </svg>
+              Connect with me
+            </a>
+          </div>
         </div>
       </section>
 
       <section class="section" id="about">
         <div class="container narrow">
           <h2 class="section-title">About Me</h2>
-          <p>
-            I hold a Ph.D. in Biotechnology, followed by two postdoctoral fellowships. At Soongsil
-            University (South Korea), I completely transitioned into a computational data analyst by
-            mastering High-Performance Computing (HPC) and essential technical skill sets. During this
-            time, I developed automated scripts to execute high-throughput virtual screening of
-            massive compound libraries and engineered robust cheminformatics pipelines to accelerate
-            drug discovery workflows. Later, at the University of Vienna (Austria), I focused on
-            building ML-driven preclinical frameworks in collaboration with Roche Pharmaceutical,
-            correlating historical in vivo data points to reduce control groups. Currently, I am a
-            Research Scientist at UR Advanced Therapeutics, supporting the team with the molecular
-            modeling of peptides using advanced molecular dynamics (MD) simulations, as well as
-            developing multiomics data analysis pipelines.
-          </p>
-          <p>
-            Throughout this career trajectory, I have been driven by a deep interest in uncovering
-            insights at the intersection of computation and biology. I specialize in AI-assisted drug
-            discovery, cheminformatics, and computational chemistry, with an ongoing focus on extending
-            my expertise into multiomics data analysis. I maintain a strong enthusiasm for programming
-            languages, advanced TechBio concepts, and their direct application to solving complex
-            biological challenges.
-          </p>
+          <div class="prose">
+            <p>
+              I hold a Ph.D. in Biotechnology, followed by two postdoctoral fellowships. At Soongsil
+              University (South Korea), I completely transitioned into a computational data analyst by
+              mastering High-Performance Computing (HPC) and essential technical skill sets. During this
+              time, I developed automated scripts to execute high-throughput virtual screening of
+              massive compound libraries and engineered robust cheminformatics pipelines to accelerate
+              drug discovery workflows. Later, at the University of Vienna (Austria), I focused on
+              building ML-driven preclinical frameworks in collaboration with Roche Pharmaceutical,
+              correlating historical in vivo data points to reduce control groups. Currently, I am a
+              Research Scientist at UR Advanced Therapeutics, supporting the team with the molecular
+              modeling of peptides using advanced molecular dynamics (MD) simulations, as well as
+              developing multiomics data analysis pipelines.
+            </p>
+            <p>
+              Throughout this career trajectory, I have been driven by a deep interest in uncovering
+              insights at the intersection of computation and biology. I specialize in AI-assisted drug
+              discovery, cheminformatics, and computational chemistry, with an ongoing focus on extending
+              my expertise into multiomics data analysis. I maintain a strong enthusiasm for programming
+              languages, advanced TechBio concepts, and their direct application to solving complex
+              biological challenges.
+            </p>
+          </div>
         </div>
       </section>
 
       <section class="section section-alt" id="research">
         <div class="container narrow">
           <h2 class="section-title">Research Interests</h2>
-          <ul class="interest-list">
-            <li>Structure-based drug discovery and computer-aided drug design (CADD)</li>
-            <li>Bioinformatics and multi-omics data analysis</li>
-            <li>Machine learning applications in computational biology and drug discovery</li>
-            <li>Cheminformatics, virtual screening, and lead optimization</li>
+          <ul class="chip-list">
+            <li class="chip">Structure-based drug discovery &amp; CADD</li>
+            <li class="chip">Bioinformatics &amp; multi-omics analysis</li>
+            <li class="chip">ML in computational biology &amp; drug discovery</li>
+            <li class="chip">Cheminformatics, virtual screening &amp; lead optimization</li>
           </ul>
         </div>
       </section>
@@ -92,14 +114,30 @@
         <div class="container narrow">
           <h2 class="section-title">Tech Horizons &amp; Personal Interests</h2>
           <div class="card-grid">
-            <article class="card">
+            <article class="card card-glow">
+              <div class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28">
+                  <path
+                    fill="currentColor"
+                    d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h2a2 2 0 0 1 2 2v1h1a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-1v1a2 2 0 0 1-2 2h-2v1.27c.6.34 1 .99 1 1.73a2 2 0 1 1-4 0c0-.74.4-1.39 1-1.73V17H9a2 2 0 0 1-2-2v-1H6a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2h1V9a2 2 0 0 1 2-2h2V5.73A2 2 0 0 1 12 2Z"
+                  />
+                </svg>
+              </div>
               <h3>Advanced TechBio</h3>
               <p>
                 Actively exploring and integrating next-generation AI workflows including Agentic AI,
                 Retrieval-Augmented Generation (RAG), and local LLMs via Ollama.
               </p>
             </article>
-            <article class="card">
+            <article class="card card-glow">
+              <div class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28">
+                  <path
+                    fill="currentColor"
+                    d="M12 2C8.5 2 6 4.5 6 8c0 2.2 1.2 4.1 3 5.2V20a1 1 0 0 0 2 0v-6.8c1.8-1.1 3-3 3-5.2 0-3.5-2.5-6-6-6Zm0 2c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4Z"
+                  />
+                </svg>
+              </div>
               <h3>Beyond the Terminal</h3>
               <p>
                 Finding balance on the court playing Badminton and enjoying a good match of Cricket.
@@ -112,36 +150,80 @@
       <section class="section section-alt" id="connect">
         <div class="container narrow">
           <h2 class="section-title">Connect &amp; Find My Work</h2>
-          <table class="connect-table">
-            <tbody>
-              <tr>
-                <th scope="row">LinkedIn</th>
-                <td>
-                  <a href="https://www.linkedin.com/in/sharath-b-s-3b16bab0" rel="noopener noreferrer"
-                    >Connect on LinkedIn</a
-                  >
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">GitHub</th>
-                <td>
-                  <a href="https://github.com/sharathbs" rel="noopener noreferrer"
-                    >View GitHub Code</a
-                  >
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">Google Scholar</th>
-                <td>
-                  <a
-                    href="https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=Sharath+B+S"
-                    rel="noopener noreferrer"
-                    >View Publications</a
-                  >
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <p class="section-lead">
+            Reach out by email, or explore my profiles below.
+          </p>
+
+          <a class="connect-email-tile" href="mailto:sharathbio123@gmail.com">
+            <span class="social-tile__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 2v.01L12 13 4 6.01V6h16ZM4 18V8.25l7.4 6.17a1 1 0 0 0 1.2 0L20 8.25V18H4Z"
+                />
+              </svg>
+            </span>
+            <span class="connect-email-tile__text">
+              <strong>Connect with me</strong>
+              <span>sharathbio123@gmail.com</span>
+            </span>
+          </a>
+
+          <div class="social-tiles">
+            <a
+              class="social-tile social-tile--linkedin"
+              href="https://www.linkedin.com/in/sharath-b-s-3b16bab0"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span class="social-tile__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.42v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"
+                  />
+                </svg>
+              </span>
+              <span class="social-tile__label">LinkedIn</span>
+              <span class="social-tile__hint">Connect</span>
+            </a>
+
+            <a
+              class="social-tile social-tile--github"
+              href="https://github.com/sharathbs"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span class="social-tile__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M12 .5C5.65.5.58 5.57.58 11.92c0 5 3.25 9.24 7.75 10.74.57.1.78-.25.78-.55 0-.27-.01-1.18-.02-2.14-3.16.69-3.82-1.35-3.82-1.35-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.53-.29-5.19-1.27-5.19-5.65 0-1.25.44-2.27 1.17-3.07-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.17a10.9 10.9 0 0 1 2.88-.39c.98 0 1.97.13 2.88.39 2.19-1.48 3.14-1.17 3.14-1.17.62 1.57.23 2.73.11 3.02.73.8 1.17 1.82 1.17 3.07 0 4.39-2.67 5.36-5.21 5.64.41.35.78 1.04.78 2.1 0 1.52-.01 2.74-.01 3.11 0 .3.21.66.79.55A11.92 11.92 0 0 0 23.42 11.92C23.42 5.57 18.35.5 12 .5Z"
+                  />
+                </svg>
+              </span>
+              <span class="social-tile__label">GitHub</span>
+              <span class="social-tile__hint">View code</span>
+            </a>
+
+            <a
+              class="social-tile social-tile--scholar"
+              href="https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=Sharath+B+S"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span class="social-tile__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M5.24 3h13.52L12 10.52 5.24 3Zm0 4.24L12 14.76l6.76-7.52H5.24ZM4 18.5h16v2H4v-2Zm2-3.5h12v2H6v-2Z"
+                  />
+                </svg>
+              </span>
+              <span class="social-tile__label">Scholar</span>
+              <span class="social-tile__hint">Publications</span>
+            </a>
+          </div>
         </div>
       </section>
     </main>
@@ -149,7 +231,7 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <p>&copy; <span id="year"></span> Sharath B S. All rights reserved.</p>
-        <a href="#top">Back to top</a>
+        <a href="mailto:sharathbio123@gmail.com">Email me</a>
       </div>
     </footer>
 

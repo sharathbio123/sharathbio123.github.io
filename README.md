@@ -64,7 +64,10 @@ GitHub Actions.
 ## Project structure
 
 ```
-index.html          # Main portfolio page (CV content)
+index.html          # Main portfolio page
+public/
+  profile.jpg       # Your photo (add this file — shown in hero)
+  profile.svg       # Placeholder until profile.jpg is added
 src/
   main.js           # Navigation and small UI helpers
   styles/main.css   # Site styles

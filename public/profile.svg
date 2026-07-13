@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Sharath B S">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f2a3d"/>
+      <stop offset="50%" stop-color="#163a4f"/>
+      <stop offset="100%" stop-color="#1a4d5c"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3dd6c3"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="rgba(61,214,195,0.08)" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <rect width="400" height="400" fill="url(#grid)"/>
+  <circle cx="200" cy="168" r="72" fill="rgba(61,214,195,0.12)" stroke="url(#ring)" stroke-width="3"/>
+  <text x="200" y="188" text-anchor="middle" font-family="Georgia, serif" font-size="52" fill="#e8f0f7">SBS</text>
+  <text x="200" y="290" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" letter-spacing="3" fill="#9bb0c4">ADD YOUR PHOTO</text>
+  <text x="200" y="318" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6b8299">Replace public/profile.jpg</text>
+</svg>
