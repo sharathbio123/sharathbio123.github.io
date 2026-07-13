@@ -14,6 +14,12 @@ All media files go in **`public/`** (served at the site root after deploy). Push
 |------|----------|
 | `My_Photo.jpg` | `public/My_Photo.jpg` |
 
+### CV (PDF)
+
+Upload your résumé as **`public/CV.pdf`**. The **CV** link in the nav opens it in a new browser tab (`/CV.pdf` on the live site).
+
+If your file has a different name, either rename it to `CV.pdf` or change the `href` on the CV nav link in `index.html`.
+
 ### Advanced TechBio — workflow screenshots
 
 Upload screenshots to **`public/gallery/techbio/`** using these exact names (`.jpg` or `.png`):
