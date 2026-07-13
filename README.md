@@ -37,16 +37,21 @@ The production build is written to `dist/`.
 
 ### Publish publicly (GitHub Pages)
 
-After merging to `main`, GitHub Actions builds and deploys the site automatically.
+Your public URL: **https://sharathbs.github.io**
 
-1. Open **Settings → Pages** on GitHub.
-2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
-3. Merge to `main` (or run the **Deploy to GitHub Pages** workflow manually).
+**One-time setup (required):**
 
-Your public URL will be: **https://sharathbs.github.io**
+1. Open https://github.com/sharathbio123/sharathbs.github.io/settings/pages
+2. Under **Build and deployment → Source**, choose **Deploy from a branch**
+3. Set **Branch** to `gh-pages` and folder to `/ (root)`
+4. Click **Save**
+
+The `gh-pages` branch already contains your built portfolio. After saving, the site is live within 1–2 minutes.
+
+On every future push to `main`, GitHub Actions rebuilds and updates `gh-pages` automatically.
 
 > `npm run dev` (localhost:5173) is for development only — only you can see that link.
-> The GitHub Pages URL above is what you share with others.
+> Share **https://sharathbs.github.io** with others.
 
 ## Project structure
 
