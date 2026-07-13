@@ -191,7 +191,7 @@ p {
 
 .hero-photo-frame {
   position: relative;
-  border-radius: 50%;
+  border-radius: var(--radius);
   padding: 4px;
   background: linear-gradient(135deg, var(--accent), var(--accent-blue), var(--accent-dim));
   box-shadow:
@@ -205,7 +205,7 @@ p {
   content: '';
   position: absolute;
   inset: -12px;
-  border-radius: 50%;
+  border-radius: var(--radius);
   border: 1px dashed rgba(61, 214, 195, 0.2);
   animation: spin-slow 24s linear infinite;
 }
@@ -214,7 +214,7 @@ p {
   display: block;
   width: 100%;
   aspect-ratio: 1;
-  border-radius: 50%;
+  border-radius: calc(var(--radius) - 2px);
   object-fit: cover;
   background: var(--surface);
 }
