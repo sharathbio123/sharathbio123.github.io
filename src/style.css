@@ -407,13 +407,12 @@ p {
   margin-top: 0.15rem;
 }
 
-.prose {
-  max-width: 65ch;
-}
-
 .prose p {
-  text-align: left;
+  text-align: justify;
+  text-align-last: left;
   hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
   text-wrap: pretty;
 }
 
