@@ -33,8 +33,20 @@ npm run build
 npm run preview
 ```
 
-The production build is written to `dist/`. For GitHub Pages deployment from this user-site repo,
-publish the contents of `dist/` to the repository root (or configure a GitHub Actions workflow).
+The production build is written to `dist/`.
+
+### Publish publicly (GitHub Pages)
+
+After merging to `main`, GitHub Actions builds and deploys the site automatically.
+
+1. Open **Settings → Pages** on GitHub.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+3. Merge to `main` (or run the **Deploy to GitHub Pages** workflow manually).
+
+Your public URL will be: **https://sharathbs.github.io**
+
+> `npm run dev` (localhost:5173) is for development only — only you can see that link.
+> The GitHub Pages URL above is what you share with others.
 
 ## Project structure
 

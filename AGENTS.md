@@ -11,5 +11,6 @@ Personal portfolio site for **Sharath B S** (`My_portfolio2026`), published via 
 - **Production build:** `npm run build` → `dist/`; preview with `npm run preview` on port **4173**.
 - **No tests or linters** are configured yet; verify with dev server + `npm run build`.
 - **Content updates:** edit `index.html` for CV/portfolio sections; styles in `src/styles/main.css`.
-- **GitHub Pages:** user-site repo serves from root; after `npm run build`, deploy `dist/` contents
-  to the repo root or add a GitHub Actions deploy workflow when ready.
+- **GitHub Pages:** `.github/workflows/deploy.yml` deploys on push to `main`. Public URL:
+  https://sharathbs.github.io — requires **Settings → Pages → Source: GitHub Actions** on GitHub.
+- **localhost:5173** is dev-only; it is not shareable with others.
