@@ -227,13 +227,13 @@ p {
 
 .hero-photo-col {
   flex-shrink: 0;
-  width: 152px;
+  width: 180px;
 }
 
 .hero-photo-frame {
   position: relative;
-  width: 152px;
-  height: 152px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   padding: 2px;
   background: linear-gradient(
@@ -555,12 +555,12 @@ p {
   }
 
   .hero-photo-col {
-    width: 132px;
+    width: 156px;
   }
 
   .hero-photo-frame {
-    width: 132px;
-    height: 132px;
+    width: 156px;
+    height: 156px;
   }
 
   .hero-role {
