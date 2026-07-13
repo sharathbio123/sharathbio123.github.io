@@ -20,6 +20,16 @@ Upload your résumé as **`public/CV.pdf`**. The **CV** link in the nav opens it
 
 If your file has a different name, either rename it to `CV.pdf` or change the `href` on the CV nav link in `index.html`.
 
+### Projects
+
+Edit the **Projects** section in `index.html` (search for `project-list`):
+
+1. Remove the `<li class="coming-soon">Updating soon</li>` line when you add your first project.
+2. Copy the commented `<a class="project-card">` block for each project.
+3. Set `href` to the project URL (GitHub repo, demo site, paper, etc.) — links open in a new tab.
+
+Example `href` values: `https://github.com/sharathbio123/your-repo`, `https://your-demo.vercel.app`
+
 ### Advanced TechBio — workflow screenshots
 
 Upload screenshots to **`public/gallery/techbio/`** using these exact names (`.jpg` or `.png`):
