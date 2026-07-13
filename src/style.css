@@ -341,6 +341,12 @@ p {
   margin: 0 0 1.5rem;
 }
 
+.coming-soon {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin: 0;
+}
+
 .prose p {
   text-align: justify;
   hyphens: auto;
