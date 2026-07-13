@@ -309,9 +309,9 @@ p {
   color: var(--text);
 }
 
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+.card-stack {
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
 
@@ -327,11 +327,6 @@ p {
 .card-glow:hover {
   transform: translateY(-3px);
   border-color: rgba(61, 214, 195, 0.35);
-}
-
-.card-icon {
-  margin-bottom: 0.5rem;
-  color: var(--accent);
 }
 
 .card p:last-child {
