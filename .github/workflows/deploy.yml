@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: pages
@@ -31,9 +31,11 @@ jobs:
       - name: Build site
         run: npm run build
 
-      - name: Deploy to gh-pages branch
+      - name: Deploy built site to public repo
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
+          external_repository: sharathbio123/sharathbio123.github.io
+          publish_branch: gh-pages
           publish_dir: ./dist
           force_orphan: true
