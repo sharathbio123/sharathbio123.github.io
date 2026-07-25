@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-label="Docking pose schematic">
+  <rect width="1200" height="750" fill="#0b1620"/>
+  <text x="120" y="80" fill="#e8f0f7" font-family="Georgia, serif" font-size="32">Top docking poses</text>
+  <ellipse cx="600" cy="400" rx="280" ry="180" fill="#101f2e" stroke="#60a5fa55" stroke-width="3"/>
+  <path d="M480 400 C520 340, 580 340, 620 390 S700 460, 740 400" fill="none" stroke="#3dd6c3" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="560" cy="370" r="14" fill="#60a5fa"/><circle cx="640" cy="420" r="14" fill="#60a5fa"/><circle cx="700" cy="380" r="14" fill="#3dd6c3"/>
+</svg>
