@@ -2,20 +2,20 @@
  * Portfolio projects.
  *
  * To add a project:
- * 1. Create public/projects/<id>/ with cover image (+ optional gallery images / video)
- * 2. Append an object below matching this shape
+ * 1. Put your recorded video + snapshot images in public/projects/<id>/
+ * 2. Append an object below
  * 3. Redeploy — the Projects grid and detail page update automatically
  *
  * Fields:
- * - id            URL slug (used as project.html?id=<id>)
+ * - id            URL slug (project.html?id=<id>)
  * - title         Card + detail heading
  * - summary       Short card blurb
  * - description   Longer detail paragraphs (array of strings)
- * - cover         Path under /public (image shown on card + detail hero)
- * - video         Optional mp4/webm path or null
- * - gallery       Optional extra image paths
+ * - cover         Cover / thumbnail image path
+ * - video         Recorded project video path (mp4/webm) or null
+ * - snapshots     Image gallery: string paths or { src, caption }
  * - tags          Short labels on the card
- * - protein       Structure + scientific metadata shown on the detail page
+ * - details       Sidebar facts (target, method, tools, highlights)
  * - links         Optional { label, href } buttons
  */
 export const projects = [
@@ -30,15 +30,14 @@ export const projects = [
     ],
     cover: '/projects/peptide-md/cover.svg',
     video: '/projects/peptide-md/preview.mp4',
-    gallery: ['/projects/peptide-md/gallery-1.svg', '/projects/peptide-md/gallery-2.svg'],
+    snapshots: [
+      { src: '/projects/peptide-md/gallery-1.svg', caption: 'RMSD / RMSF trajectory snapshot' },
+      { src: '/projects/peptide-md/gallery-2.svg', caption: 'Residue contact map snapshot' },
+    ],
     tags: ['Molecular Dynamics', 'Peptides', 'GROMACS'],
-    protein: {
-      name: 'Therapeutic peptide candidate',
-      pdbId: '1L2Y',
-      organism: 'Designed / model system',
+    details: {
+      target: 'Therapeutic peptide candidate',
       method: 'Explicit-solvent MD (NPT)',
-      resolution: 'NMR reference fold (Trp-cage)',
-      bindingSite: 'Compact hydrophobic core + solvent-exposed polar face',
       tools: ['GROMACS', 'MDAnalysis', 'PyMOL'],
       highlights: [
         'Stable helical segments retained across replicate runs',
@@ -59,18 +58,14 @@ export const projects = [
     ],
     cover: '/projects/virtual-screening/cover.svg',
     video: null,
-    gallery: [
-      '/projects/virtual-screening/gallery-1.svg',
-      '/projects/virtual-screening/gallery-2.svg',
+    snapshots: [
+      { src: '/projects/virtual-screening/gallery-1.svg', caption: 'Top docking pose snapshot' },
+      { src: '/projects/virtual-screening/gallery-2.svg', caption: 'Hit triage funnel snapshot' },
     ],
     tags: ['Docking', 'HPC', 'Cheminformatics'],
-    protein: {
-      name: 'Kinase-like screening target',
-      pdbId: '1M17',
-      organism: 'Homo sapiens (EGFR kinase domain model)',
+    details: {
+      target: 'Kinase-like screening target',
       method: 'Structure-based docking + ligand filters',
-      resolution: 'Crystal structure reference',
-      bindingSite: 'ATP-binding cleft / hinge region',
       tools: ['AutoDock / Vina', 'RDKit', 'HPC batch scripts'],
       highlights: [
         'Library-scale docking orchestrated on HPC queues',
@@ -91,15 +86,13 @@ export const projects = [
     ],
     cover: '/projects/multiomics-pipeline/cover.svg',
     video: null,
-    gallery: ['/projects/multiomics-pipeline/gallery-1.svg'],
+    snapshots: [
+      { src: '/projects/multiomics-pipeline/gallery-1.svg', caption: 'Pipeline stages overview' },
+    ],
     tags: ['Multi-Omics', 'Pipelines', 'Python'],
-    protein: {
-      name: 'Pathway-centric protein set',
-      pdbId: '1T46',
-      organism: 'Homo sapiens (ABL kinase reference)',
-      method: 'Integrative omics + structure context',
-      resolution: 'Crystal structure reference',
-      bindingSite: 'Catalytic and regulatory interfaces',
+    details: {
+      target: 'Pathway-centric protein set',
+      method: 'Integrative omics analysis',
       tools: ['Python', 'pandas', 'scanpy / custom scripts'],
       highlights: [
         'Modular ingest for transcriptomic and proteomic tables',
