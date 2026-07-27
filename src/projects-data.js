@@ -14,93 +14,55 @@
  * - cover         Cover / thumbnail image path
  * - video         Recorded project video path (mp4/webm) or null
  * - snapshots     Image gallery: string paths or { src, caption }
+ * - features      Optional bullet list of key features
  * - tags          Short labels on the card
  * - details       Sidebar facts (target, method, tools, highlights)
+ * - note          Optional notice shown on the detail page
  * - links         Optional { label, href } buttons
  */
 export const projects = [
   {
-    id: 'peptide-md',
-    title: 'Therapeutic Peptide MD Simulations',
+    id: 'moldockpro',
+    title: 'MolDockPro',
     summary:
-      'Molecular dynamics of therapeutic peptides to assess conformational stability, binding poses, and solvent interactions.',
+      'End-to-end molecular docking platform that automates the complete structure-based drug discovery workflow.',
     description: [
-      'At UR Advanced Therapeutics I support peptide-focused molecular modeling with advanced MD simulations. The goal is to understand how candidate sequences behave in solution and near their intended targets before wet-lab iteration.',
-      'Trajectories are analyzed for secondary-structure persistence, contact maps, RMSD/RMSF profiles, and binding-pocket occupancy. Insights feed lead prioritization and sequence refinement.',
+      'MolDockPro is an end-to-end molecular docking platform designed to automate the complete structure-based drug discovery workflow through an intuitive and research-focused user interface.',
+      'The platform streamlines protein and ligand preparation, binding site detection, molecular docking, pose ranking, and protein–ligand interaction analysis, enabling researchers to perform docking studies efficiently and reproducibly.',
     ],
-    cover: '/projects/peptide-md/cover.svg',
-    video: '/projects/peptide-md/preview.mp4',
-    snapshots: [
-      { src: '/projects/peptide-md/gallery-1.svg', caption: 'RMSD / RMSF trajectory snapshot' },
-      { src: '/projects/peptide-md/gallery-2.svg', caption: 'Residue contact map snapshot' },
-    ],
-    tags: ['Molecular Dynamics', 'Peptides', 'GROMACS'],
-    details: {
-      target: 'Therapeutic peptide candidate',
-      method: 'Explicit-solvent MD (NPT)',
-      tools: ['GROMACS', 'MDAnalysis', 'PyMOL'],
-      highlights: [
-        'Stable helical segments retained across replicate runs',
-        'Contact persistence used to rank sequence variants',
-        'Solvent-accessible surface mapped for formulation clues',
-      ],
-    },
-    links: [],
-  },
-  {
-    id: 'virtual-screening',
-    title: 'High-Throughput Virtual Screening Pipeline',
-    summary:
-      'Automated HPC workflows for docking massive compound libraries and cheminformatics triage of hit lists.',
-    description: [
-      'During my postdoc at Soongsil University I built automated scripts for high-throughput virtual screening across large ligand libraries on HPC resources.',
-      'The pipeline handles ligand preparation, docking batch submission, pose filtering, and cheminformatics enrichment so medicinal chemists receive ranked, chemically sensible shortlists.',
-    ],
-    cover: '/projects/virtual-screening/cover.svg',
+    cover: '/projects/moldockpro/homepage.png',
     video: null,
     snapshots: [
-      { src: '/projects/virtual-screening/gallery-1.svg', caption: 'Top docking pose snapshot' },
-      { src: '/projects/virtual-screening/gallery-2.svg', caption: 'Hit triage funnel snapshot' },
+      {
+        src: '/projects/moldockpro/homepage.png',
+        caption: 'MolDockPro homepage — Molecular Discovery Suite',
+        alt: 'Screenshot of the MolDockPro project homepage',
+      },
     ],
-    tags: ['Docking', 'HPC', 'Cheminformatics'],
+    features: [
+      'Automated protein and ligand preparation',
+      'Binding pocket detection',
+      'Molecular docking and pose prediction',
+      'Binding affinity scoring and pose ranking',
+      'Interactive 3D visualization of protein–ligand complexes',
+      'Protein–ligand interaction analysis',
+      'Unified, reproducible workflow for structure-based drug discovery',
+    ],
+    tags: ['Molecular Docking', 'Drug Discovery', 'Platform'],
     details: {
-      target: 'Kinase-like screening target',
-      method: 'Structure-based docking + ligand filters',
-      tools: ['AutoDock / Vina', 'RDKit', 'HPC batch scripts'],
+      target: 'Structure-based drug discovery workflows',
+      method: 'End-to-end docking pipeline (prep → pocket → dock → score → analyze)',
+      tools: ['Protein prep', 'Ligand prep', 'Docking engine', '3D visualization'],
       highlights: [
-        'Library-scale docking orchestrated on HPC queues',
-        'PAINS / property filters reduce false positives',
-        'Pose clusters exported for visual inspection',
+        'Automates the full docking workflow in one interface',
+        'Supports pocket detection, pose ranking, and interaction analysis',
+        'Built for reproducible, research-focused docking studies',
       ],
     },
-    links: [],
-  },
-  {
-    id: 'multiomics-pipeline',
-    title: 'Multi-Omics Analysis Pipelines',
-    summary:
-      'Reproducible pipelines that connect molecular modeling signals with multi-omics readouts for translational decisions.',
-    description: [
-      'In parallel with structure work, I develop multi-omics analysis pipelines that help translate computational hypotheses into biomarker-aware interpretations.',
-      'The emphasis is on transparent, version-controlled workflows that collaborators can re-run and extend as new cohorts arrive.',
+    note: 'This project is not open source or publicly accessible. Please contact me if you would like to discuss the project or request a demonstration.',
+    links: [
+      { label: 'Contact for demo', href: 'mailto:sharathbio123@gmail.com?subject=MolDockPro%20demo%20request' },
     ],
-    cover: '/projects/multiomics-pipeline/cover.svg',
-    video: null,
-    snapshots: [
-      { src: '/projects/multiomics-pipeline/gallery-1.svg', caption: 'Pipeline stages overview' },
-    ],
-    tags: ['Multi-Omics', 'Pipelines', 'Python'],
-    details: {
-      target: 'Pathway-centric protein set',
-      method: 'Integrative omics analysis',
-      tools: ['Python', 'pandas', 'scanpy / custom scripts'],
-      highlights: [
-        'Modular ingest for transcriptomic and proteomic tables',
-        'Differential signals mapped onto structural neighborhoods',
-        'Reusable notebooks for collaborator hand-off',
-      ],
-    },
-    links: [],
   },
 ];
 
