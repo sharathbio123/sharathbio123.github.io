@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-label="RMSD profile schematic">
-  <rect width="1200" height="750" fill="#0b1620"/>
-  <rect x="100" y="100" width="1000" height="520" rx="18" fill="#101f2e" stroke="#3dd6c355"/>
-  <polyline points="140,520 260,460 380,430 500,390 620,410 740,350 860,330 980,300 1060,280" fill="none" stroke="#3dd6c3" stroke-width="6"/>
-  <polyline points="140,540 260,500 380,470 500,450 620,455 740,430 860,420 980,400 1060,395" fill="none" stroke="#60a5fa" stroke-width="4" opacity="0.8"/>
-  <text x="120" y="80" fill="#e8f0f7" font-family="Georgia, serif" font-size="32">RMSD / RMSF trajectories</text>
-</svg>

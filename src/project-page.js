@@ -59,9 +59,9 @@ function renderNotFound() {
 function renderProject(item) {
   if (titleEl) titleEl.textContent = `${item.title} | Sharath B S`;
 
-  const snapshots = (item.snapshots || []).map((snap, index) =>
-    normalizeSnapshot(snap, index, item.title)
-  );
+  const snapshots = (item.snapshots || [])
+    .map((snap, index) => normalizeSnapshot(snap, index, item.title))
+    .filter((snap) => !(item.cover && snap.src === item.cover && !item.video));
 
   const gallery = snapshots
     .map(
@@ -90,10 +90,16 @@ function renderProject(item) {
     .map((tool) => `<li class="chip">${escapeHtml(tool)}</li>`)
     .join('');
 
+  const features = (item.features || [])
+    .map((feature) => `<li>${escapeHtml(feature)}</li>`)
+    .join('');
+
   const links = (item.links || [])
     .map(
       (link) => `
-      <a class="btn btn-primary" href="${escapeHtml(link.href)}" target="_blank" rel="noopener noreferrer">
+      <a class="btn btn-primary" href="${escapeHtml(link.href)}" ${
+        link.href.startsWith('mailto:') ? '' : 'target="_blank" rel="noopener noreferrer"'
+      }>
         ${escapeHtml(link.label)}
       </a>`
     )
@@ -112,13 +118,38 @@ function renderProject(item) {
       </div>`
     : '';
 
+  const coverBlock = !item.video
+    ? `
+      <div class="project-media-block">
+        <h2 class="section-title">Homepage</h2>
+        <div class="project-hero__media project-hero__media--inline">
+          <img
+            src="${escapeHtml(item.cover)}"
+            alt="${escapeHtml(item.title)} homepage screenshot"
+            width="1200"
+            height="750"
+          />
+        </div>
+      </div>`
+    : '';
+
   const snapshotsBlock = gallery
     ? `
       <div class="project-media-block">
-        <h2 class="section-title">${item.video ? 'Snapshots' : 'Images &amp; snapshots'}</h2>
+        <h2 class="section-title">Snapshots</h2>
         <p class="section-lead">Click a snapshot to open the full image.</p>
         <div class="project-gallery">${gallery}</div>
       </div>`
+    : '';
+
+  const featuresBlock = features
+    ? `
+      <h2 class="section-title" style="margin-top:2rem">Key features</h2>
+      <ul class="feature-list">${features}</ul>`
+    : '';
+
+  const noteBlock = item.note
+    ? `<p class="project-note">${escapeHtml(item.note)}</p>`
     : '';
 
   root.innerHTML = `
@@ -133,46 +164,36 @@ function renderProject(item) {
     <section class="section">
       <div class="container project-layout">
         <div class="project-main">
-          ${videoBlock || ''}
-          ${
-            !item.video
-              ? `<div class="project-hero__media project-hero__media--inline">
-                   <img src="${escapeHtml(item.cover)}" alt="${escapeHtml(item.title)} cover" width="1200" height="750" />
-                 </div>`
-              : ''
-          }
-
+          ${videoBlock}
+          ${coverBlock}
           ${snapshotsBlock}
 
           <h2 class="section-title" style="margin-top:2rem">Overview</h2>
           <div class="prose">
             ${item.description.map((p) => `<p>${escapeHtml(p)}</p>`).join('')}
           </div>
+
+          ${featuresBlock}
+          ${noteBlock}
         </div>
 
         <aside class="project-aside">
           <div class="protein-panel">
             <h2>Project details</h2>
             <dl class="protein-meta">
-              <div><dt>Target</dt><dd>${escapeHtml(details.target || '—')}</dd></div>
-              <div><dt>Method</dt><dd>${escapeHtml(details.method || '—')}</dd></div>
+              <div><dt>Focus</dt><dd>${escapeHtml(details.target || '—')}</dd></div>
+              <div><dt>Workflow</dt><dd>${escapeHtml(details.method || '—')}</dd></div>
             </dl>
 
             ${
               highlights
-                ? `<h3>Key findings</h3><ul class="protein-highlights">${highlights}</ul>`
+                ? `<h3>Highlights</h3><ul class="protein-highlights">${highlights}</ul>`
                 : ''
             }
 
-            ${tools ? `<h3>Tools</h3><ul class="chip-list">${tools}</ul>` : ''}
+            ${tools ? `<h3>Capabilities</h3><ul class="chip-list">${tools}</ul>` : ''}
 
             ${links ? `<div class="project-aside__actions">${links}</div>` : ''}
-
-            <p class="viewer-note" style="margin-top:1.25rem">
-              Replace the placeholder video and snapshots in
-              <code>public/projects/${escapeHtml(item.id)}/</code>
-              with your recorded media.
-            </p>
           </div>
         </aside>
       </div>

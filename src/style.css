@@ -651,6 +651,32 @@ p {
   margin-top: 1.25rem;
 }
 
+.feature-list {
+  margin: 0 0 1.5rem;
+  padding-left: 1.15rem;
+  color: var(--text-muted);
+}
+
+.feature-list li {
+  margin-bottom: 0.55rem;
+  padding-left: 0.15rem;
+}
+
+.feature-list li::marker {
+  color: var(--accent);
+}
+
+.project-note {
+  margin: 1.5rem 0 0;
+  padding: 1rem 1.15rem;
+  border-radius: 12px;
+  border: 1px solid rgba(61, 214, 195, 0.28);
+  background: rgba(61, 214, 195, 0.08);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
 @media (max-width: 860px) {
   .project-layout {
     grid-template-columns: 1fr;

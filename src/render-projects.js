@@ -25,7 +25,7 @@ function renderProjectCards() {
             <span class="project-card__tags">
               ${project.tags.map((tag) => `<span class="project-card__tag">${tag}</span>`).join('')}
             </span>
-            <span class="project-card__cta">View video &amp; snapshots →</span>
+            <span class="project-card__cta">View project →</span>
           </span>
         </a>
       </li>
