@@ -39,16 +39,7 @@ export const projects = [
         alt: 'Screenshot of the MolDockPro project homepage',
       },
     ],
-    features: [
-      'Automated protein and ligand preparation',
-      'Binding pocket detection',
-      'Molecular docking and pose prediction',
-      'Binding affinity scoring and pose ranking',
-      'Interactive 3D visualization of protein–ligand complexes',
-      'Protein–ligand interaction analysis',
-      'Unified, reproducible workflow for structure-based drug discovery',
-    ],
-    tags: ['Molecular Docking', 'Drug Discovery', 'Platform'],
+    tags: ['Molecular Docking', 'Drug Discovery', 'AlphaFold', 'RDKit'],
     details: {
       target: 'Structure-based drug discovery workflows',
       method: 'End-to-end docking pipeline (prep → pocket → dock → score → analyze)',
