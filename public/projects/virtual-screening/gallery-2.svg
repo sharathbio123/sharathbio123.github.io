@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-label="Hit triage schematic">
+  <rect width="1200" height="750" fill="#0b1620"/>
+  <text x="120" y="80" fill="#e8f0f7" font-family="Georgia, serif" font-size="32">Cheminformatics triage funnel</text>
+  <polygon points="300,140 900,140 780,280 420,280" fill="#3dd6c322" stroke="#3dd6c3"/>
+  <polygon points="420,300 780,300 700,420 500,420" fill="#60a5fa22" stroke="#60a5fa"/>
+  <polygon points="500,440 700,440 650,560 550,560" fill="#3dd6c344" stroke="#3dd6c3"/>
+  <text x="560" y="220" text-anchor="middle" fill="#9bb0c4" font-family="sans-serif" font-size="24">10<sup>6</sup> compounds</text>
+  <text x="600" y="370" text-anchor="middle" fill="#9bb0c4" font-family="sans-serif" font-size="24">docked poses</text>
+  <text x="600" y="510" text-anchor="middle" fill="#e8f0f7" font-family="sans-serif" font-size="24">shortlist</text>
+</svg>

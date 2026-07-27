@@ -172,24 +172,11 @@
       <section class="section section-alt" id="projects">
         <div class="container">
           <h2 class="section-title">Projects</h2>
-          <ul class="project-list">
-            <!--
-            Add projects by copying this block (remove "Updating soon" when you add the first one):
-
-            <li>
-              <a
-                class="project-card"
-                href="https://github.com/sharathbio123/your-repo"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <span class="project-card__title">Project name</span>
-                <span class="project-card__desc">One-line description of the project.</span>
-                <span class="project-card__cta">View project →</span>
-              </a>
-            </li>
-            -->
-            <li class="coming-soon">Updating soon</li>
+          <p class="section-lead">
+            Selected computational work — open a project to watch the recorded video and browse snapshots.
+          </p>
+          <ul class="project-list" id="project-list">
+            <li class="coming-soon">Loading projects…</li>
           </ul>
         </div>
       </section>
@@ -299,6 +286,7 @@
       </div>
     </footer>
 
+    <script type="module" src="/src/render-projects.js"></script>
     <script type="module">
       const navToggle = document.querySelector('.nav-toggle');
       const navMenu = document.querySelector('.nav-menu');
